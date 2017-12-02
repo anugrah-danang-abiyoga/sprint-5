@@ -44,6 +44,22 @@ var size = 8;
 var space = ' ';
 var block = '#';
 
-for (i=1; i<=8; i++); {
+for (i=1; i<=8; i++) {
   var line = '';
+
+  for (var a=1; a<=size; a++) {
+    if (i%2) {
+      if (a%2) {
+        line = line + space;
+      } else {
+        line = line + block;
+      } else {
+        if (a%2) {
+          line = line + block;
+        } else {
+          line = block + line;
+        }
+      }
+    }
+  } console.log(line)
 }
